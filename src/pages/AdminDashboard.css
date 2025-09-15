@@ -1,0 +1,21 @@
+/* src/pages/AdminDashboard.css */
+.admin-dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .admin-dashboard-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .admin-dashboard-container p {
+    margin-bottom: 30px;
+    color: #555;
+  }
+  

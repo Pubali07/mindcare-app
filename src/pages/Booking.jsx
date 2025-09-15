@@ -1,30 +1,71 @@
-import { useState } from "react";
-//import { collection, addDoc } from "firebase/firestore";
-//import { db } from "../firebase";
+import React, { useState } from "react";
+import './Booking.css';
 
 function Booking() {
-  const [name, setName] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [msg, setMsg] = useState("");
+  const [selectedCounselor, setSelectedCounselor] = useState(null);
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedType, setSelectedType] = useState("Individual Therapy (50 min)");
+  const [description, setDescription] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await addDoc(collection(db, "bookings"), { name, date, time });
-    setMsg("Appointment booked successfully!");
-    setName(""); setDate(""); setTime("");
+  const counselors = [
+    { name: "Dr. Sarah Chen", specialty: "Anxiety & Depression", available: "Today 2:00 PM" },
+    { name: "Dr. Michael Rodriguez", specialty: "Trauma Therapy", available: "Tomorrow 10:00 AM" },
+    { name: "Dr. Emma Thompson", specialty: "Relationship Counseling", available: "Tomorrow 3:00 PM" }
+  ];
+
+  const handleSubmit = () => {
+    alert("Session booked successfully! You'll receive a confirmation email shortly.");
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-md max-w-lg mx-auto">
-      <h2 className="text-xl font-bold mb-2">Book Appointment</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-        <input placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} className="border p-2" />
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="border p-2" />
-        <input type="time" value={time} onChange={(e) => setTime(e.target.value)} className="border p-2" />
-        <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded-lg">Book</button>
-      </form>
-      {msg && <p className="mt-2 text-green-600">{msg}</p>}
+    <div className="booking-container">
+      <h2>Book a Session</h2>
+      <p>Connect with licensed mental health professionals</p>
+
+      <div className="booking-grid">
+        <div className="counselors">
+          <h3>Choose Your Counselor</h3>
+          {counselors.map((counselor, index) => (
+            <div
+              key={index}
+              className={`counselor-card ${selectedCounselor?.name === counselor.name ? 'selected' : ''}`}
+              onClick={() => setSelectedCounselor(counselor)}
+            >
+              <h4>{counselor.name}</h4>
+              <p>{counselor.specialty}</p>
+              <p className="available">Available: {counselor.available}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="session-details">
+          <h3>Session Details</h3>
+
+          <label>Preferred Date</label>
+          <input
+            type="date"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+          />
+
+          <label>Session Type</label>
+          <select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
+            <option>Individual Therapy (50 min)</option>
+            <option>Couples Therapy (80 min)</option>
+            <option>Group Session (90 min)</option>
+          </select>
+
+          <label>Brief Description (Optional)</label>
+          <textarea
+            rows="3"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="What would you like to focus on in your session?"
+          ></textarea>
+
+          <button onClick={handleSubmit}>Book Confidential Session</button>
+        </div>
+      </div>
     </div>
   );
 }
