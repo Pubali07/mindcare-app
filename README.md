@@ -1,12 +1,56 @@
-# React + Vite
+# 🧠 MindCare App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hackathon Project – **Digital Psychological Intervention System**  
+A platform to support college students with mental health resources, early intervention, and stigma-free access to help.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🤖 **AI-Guided First-Aid Chatbot** – interactive support with coping strategies  
+- 📅 **Confidential Booking System** – schedule appointments with counsellors  
+- 🎧 **Psychoeducational Resource Hub** – videos, audios, and wellness guides in regional languages  
+- 💬 **Peer Support Forum** – anonymous, moderated student community  
+- 📊 **Admin Dashboard** – analytics on mental health trends (bookings, posts, common issues)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React + Vite + TailwindCSS  
+- **Database:** Firebase Firestore  
+- **Charts & Analytics:** Recharts  
+- **Hosting:** (Netlify / Vercel / Firebase Hosting – to be deployed)  
+
+---
+
+## ⚡ Quick Start
+
+Clone the repo:
+```bash
+git clone https://github.com/Pubali07/mindcare-app.git
+cd mindcare-app
+npm install
+npm run dev
+
+
+🔧 Firebase Setup
+
+Go to Firebase Console
+ → Create project.
+
+Enable Firestore Database.
+
+Copy your Firebase config into src/firebase.js.
+
+That’s it! Data (bookings, forum posts) will start saving automatically.
+
+🎯 Demo Flow
+
+Student chats with the AI bot → gets coping strategies.
+
+Student checks Resource Hub → plays relaxation video.
+
+Student books an appointment → stored in database.
+
+Student posts anonymously in Forum → peers can see posts.
+
+Admin views Dashboard → sees stats in charts.
