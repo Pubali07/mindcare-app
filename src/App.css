@@ -8,6 +8,8 @@ body {
   a {
     text-decoration: none;
     color: inherit;
+    font-size: 110%;
+    
   }
   
   .navbar {
@@ -29,9 +31,12 @@ body {
   }
   
   .nav-logo {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 600;
-    color: #3b82f6;
+    color: rgb(31, 30, 148);
+ 
+  
+   
   }
   
   .nav-links a {

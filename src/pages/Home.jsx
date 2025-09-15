@@ -13,7 +13,7 @@ function Home() {
         <div className="hero-content">
           <div className="hero-tagline">✨ Your journey to wellness starts here</div>
           <h1 className="hero-title">
-            Welcome to <span className="highlight">MindCare</span>
+            Welcome to <span className="highlight">AAশা</span>
           </h1>
           <p className="hero-subtitle">
             Your safe, stigma-free sanctuary for mental health support. <br />

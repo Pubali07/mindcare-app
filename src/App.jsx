@@ -17,7 +17,7 @@ export default function App() {
     <div>
       <nav className="navbar">
         <div className="nav-container">
-          <Link to="/" className="nav-logo">MindCare</Link>
+          <Link to="/" className="nav-logo">AAশা</Link>
           <div className="nav-links">
             <Link to="/">Home</Link>
             <Link to="/chatbot">Support</Link>
