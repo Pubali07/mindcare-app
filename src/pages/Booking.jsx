@@ -8,9 +8,9 @@ function Booking() {
   const [description, setDescription] = useState("");
 
   const counselors = [
-    { name: "Dr. Sarah Chen", specialty: "Anxiety & Depression", available: "Today 2:00 PM" },
-    { name: "Dr. Michael Rodriguez", specialty: "Trauma Therapy", available: "Tomorrow 10:00 AM" },
-    { name: "Dr. Emma Thompson", specialty: "Relationship Counseling", available: "Tomorrow 3:00 PM" }
+    { name: "Dr. Gayatri Devi", specialty: "Anxiety & Depression", available: "Today 2:00 PM" },
+    { name: "Dr. Rahul Krishna", specialty: "Trauma Therapy", available: "Tomorrow 10:00 AM" },
+    { name: "Dr. Sadanand Iyer", specialty: "Relationship Counseling", available: "Tomorrow 3:00 PM" }
   ];
 
   const handleSubmit = () => {
