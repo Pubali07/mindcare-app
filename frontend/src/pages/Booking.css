@@ -1,0 +1,102 @@
+.booking-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .booking-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  
+  .booking-container p {
+    margin-bottom: 2rem;
+    color: #475569;
+  }
+  
+  .booking-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .counselors, .session-details {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .counselor-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background: #f0f4ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .counselor-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .counselor-card.selected {
+    border: 2px solid #4f46e5;
+    background: #e0e7ff;
+  }
+  
+  .counselor-card h4 {
+    margin: 0;
+    color: #1e293b;
+  }
+  
+  .counselor-card p {
+    margin: 0.25rem 0;
+    color: #475569;
+  }
+  
+  .counselor-card .available {
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  .session-details label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #334155;
+    font-weight: 500;
+  }
+  
+  .session-details input,
+  .session-details select,
+  .session-details textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .session-details button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(to right, #4f46e5, #9333ea);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .session-details button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  

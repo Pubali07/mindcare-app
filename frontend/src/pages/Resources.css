@@ -1,0 +1,63 @@
+.resources-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .resources-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  
+  .resources-container p {
+    margin-bottom: 2rem;
+    color: #475569;
+  }
+  
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .resource-card {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .resource-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .resource-card .icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .resource-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  
+  .resource-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.4;
+  }
+  
